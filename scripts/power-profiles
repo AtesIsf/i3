@@ -124,7 +124,6 @@ default_menu_options=(
   [   Performance]="powerprofilesctl set performance"
   [   Balanced]="powerprofilesctl set balanced"
   [   Power Saver]="powerprofilesctl set power-saver"
-  [   Cancel]=""
 )
 
 # The menu that will be displayed
