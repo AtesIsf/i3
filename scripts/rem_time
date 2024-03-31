@@ -1,0 +1,1 @@
+dunstify "$(acpi | grep -oP '\d+:\d+:\d+') Remaining"
