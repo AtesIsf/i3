@@ -32,7 +32,7 @@ my $short_text;
 my $label = '😅';
 my $bat_number = $ENV{BLOCK_INSTANCE} || 0;
 
-open (UPOWER, "upower -i /org/freedesktop/UPower/devices/battery_BAT$bat_number | grep 'percentage' |") or die;
+open (UPOWER, "acpi | grep -oE '[0-9]+' |") or die;
 $upower = <UPOWER>;
 close(UPOWER);
 
@@ -44,7 +44,7 @@ if ($upower !~ /:          (\d+)%/) {
 $percent = $1;
 $full_text = "$percent%";
 
-open (BAT_STATE, "upower -i /org/freedesktop/UPower/devices/battery_BAT$bat_number | grep 'state' |") or die;
+open (BAT_STATE, "acpi | grep -oE '^[A-Za-z]+ing\b' |") or die;
 $bat_state = <BAT_STATE>;
 close(BAT_STATE);
 
@@ -53,11 +53,11 @@ if ($bat_state !~ /:               (\w+)/) {
 }
 $status = $1;
 
-if ($status eq 'discharging') {
+if ($status eq 'Discharging') {
 	$full_text .= ' ';
-} elsif ($status eq 'charging') {
+} elsif ($status eq 'Charging') {
 	$full_text .= ' ';
-} elsif ($status eq 'Unknown') {
+} else {
 	open (AC_ADAPTER, "acpi -a |") or die;
 	$ac_adapt = <AC_ADAPTER>;
 	close(AC_ADAPTER);
