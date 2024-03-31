@@ -87,8 +87,8 @@ else:
             FA_BATTERY = "<span font='FontAwesome'>\uf241</span>"
 
         #    return config.get("color_70", "#FFFF33")
-        if percent < 10:
-            return config.get("color_80", "#FFFF66")
+        #if percent < 10:
+        #    return FA_BATTERY, config.get("color_full", "#FFFF66")
         return FA_BATTERY, config.get("color_full", "#FFFFFF")
     FA_BATTERY, p_left = color(percentleft)
 
