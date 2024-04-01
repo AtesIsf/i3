@@ -486,22 +486,22 @@ for_window [class="urxvt"] border pixel 1
 ######################################
 
 # Define colors variables:
-set $darkbluetrans	#08052be6
-set $darkblue		#08052b
-set $lightblue		#5294e2
-set $urgentred		#e53935
+set $darkbluetrans	#458588e6
+set $darkblue		#458588
+set $lightblue		#83a598
+set $urgentred		#fb4934
 set $white		#ffffff
 set $black		#000000
-set $purple		#e345ff
-set $darkgrey		#383c4a
-set $grey		#b0b5bd
-set $mediumgrey		#8b8b8b
-set $yellowbrown	#e1b700
+set $purple		#b16286
+set $darkgrey		#282828
+set $grey		#a89984
+set $mediumgrey		#928374
+set $yellowbrown	#b57614
 
 # define colors for windows:
 #class		        	border		bground		text		indicator	child_border
-client.focused		    	$lightblue	$darkblue	$white		$mediumgrey	$mediumgrey
-client.unfocused	    	$darkblue	$darkblue	$grey		$darkgrey	$darkgrey
+client.focused		    	$mediumgrey	$darkgrey	$white		$mediumgrey	$mediumgrey
+client.unfocused	    	$mediumgrey	$darkgrey	$grey		$darkgrey	$darkgrey
 client.focused_inactive		$darkblue	$darkblue	$grey		$black		$black
 client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
 
@@ -533,7 +533,7 @@ bar {
 		    statusline         $white
 #                          		border 		        bg		txt		indicator
 		focused_workspace	$mediumgrey	   	$grey		$darkgrey	$purple
-		active_workspace	$lightblue      	$mediumgrey	$darkgrey	$purple
+		active_workspace	$grey      	$mediumgrey	$darkgrey	$purple
 		inactive_workspace	$darkgrey   		$darkgrey	$grey		$purple
 		urgent_workspace	$urgentred	    	$urgentred	$white		$purple
 	}
