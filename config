@@ -337,7 +337,7 @@ set $ws10 "10"
 ##############
 # compositor #
 ##############
-exec --no-startup-id picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0
+exec_always --no-startup-id picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0
 
 # transparency
 # uncomment one of them to be used
@@ -377,7 +377,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # if enabled you should comment welcome app.
 # https://github.com/jceb/dex
 #exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
-exec --no-startup-id dex --autostart --environment i3
+exec_always --no-startup-id dex --autostart --environment i3
 
 # start welcome app
 #exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3 
@@ -449,11 +449,9 @@ exec --no-startup-id nm-applet
 # easy effects
 exec --no-startup-id easyeffects --gapplication-service
 
-# birdtray
-exec --no-startup-id birdtray
-
 # clipman-applet
 #exec --no-startup-id xfce4-clipman
+
 
 ##################
 # floating rules #
