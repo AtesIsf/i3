@@ -494,6 +494,7 @@ set $white		#ffffff
 set $black		#000000
 set $purple		#b16286
 set $darkgrey		#282828
+set $darkergrey #1d2021
 set $grey		#a89984
 set $mediumgrey		#928374
 set $yellowbrown	#b57614
@@ -529,12 +530,12 @@ bar {
 
 		    colors {
 		    separator          $purple
-		    background         $darkgrey
+		    background         $darkergrey
 		    statusline         $white
 #                          		border 		        bg		txt		indicator
-		focused_workspace	$mediumgrey	   	$grey		$darkgrey	$purple
+		focused_workspace	$mediumgrey	   	$grey		$darkergrey	$purple
 		active_workspace	$grey      	$mediumgrey	$darkgrey	$purple
-		inactive_workspace	$darkgrey   		$darkgrey	$grey		$purple
+		inactive_workspace	$darkergrey   		$darkergrey	$grey		$purple
 		urgent_workspace	$urgentred	    	$urgentred	$white		$purple
 	}
 }
